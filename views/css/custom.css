@@ -1,0 +1,18 @@
+tr, td {
+  border: none !important;
+  cursor: pointer;
+}
+
+tr {
+  margin-bottom: 10px;
+}
+
+table.card {
+  background-color: brown;
+}
+
+table td .card-body {
+  background-color: pink;
+  color: pink;
+  font-size: 3rem;
+}

@@ -1,0 +1,29 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build artifacts
+dist/
+build/
+.next/ # Next.js build output
+.nuxt/ # Nuxt.js build output
+
+# Optional npm cache directory
+.npm
+.eslintcache
+
+# Environment variables
+.env
+.env.test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and editor files (optional but recommended)
+.vscode/
+.idea/
+.DS_Store

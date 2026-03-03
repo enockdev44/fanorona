@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-12 col-lg-12">
+		<h1>Creative Dashboard</h1>
+		<div class="row">
+			<div class="col">
+				<canvas id="produitsChart" style="width:100%;max-width:700px"></canvas>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/Chart.min.js">
+</script>
+<script src="/js/Chart.bundle.min.js">
+</script>
+<script>
+  
+  const products = "<%= dataCharts.products %>".split(",")
+  const prices = "<%= dataCharts.prices %>".split(",")
+  
+  function createChart(chartName, chartTitle, chartSubTitle,  chartXYValues, color) {
+    var myChart = new Chart(chartName, {
+      type: "bar",
+     data: {
+        labels: products,
+        datasets: [{
+          label: chartSubTitle,
+          backgroundColor: color,
+          data: chartXYValues
+        }]
+      },
+      options: {
+        title: {text: chartTitle, display: true},
+        legend: {display: true},
+        scales: {
+          xAxes: [{ticks: {min: 0}}],
+          yAxes: [{ticks: {min: 0}}],
+        }
+      }
+    });
+  }
+  
+  createChart("produitsChart", "Représentation des produits", "Comparaison des prix des produits", prices, "#efefef")
+
+</script>
